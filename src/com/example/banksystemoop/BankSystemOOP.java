@@ -14,13 +14,34 @@ public class BankSystemOOP {
             this.lastName = lastName;
         }
 
+        public void setAge(int age) {
+            this.age = age;
+        }
+
+        public void setSsn(int ssn) {
+            if(String.valueOf(ssn).length() != 9) {
+                System.out.println("Invalid SSN");
+            }
+            else {
+                this.ssn = ssn;
+            }
+        }
+
         public String getFullname() {
             return this.firstName + " " + this.lastName;
         }
 
-        public void setAge(int age) {
-            this.age = age;
+        public int getAge() {
+            return this.age;
         }
+
+        public int getSsn() {
+            return this.ssn;
+        }
+    }
+
+    public static class Member extends User {
+        int accountNumber;
     }
 
     public static void main(String[] args) {
