@@ -6,7 +6,6 @@ public class BankSystemOOP {
 
         String firstName;
         String lastName;
-        String fullname;
         int age;
         int ssn;
 
@@ -25,8 +24,5 @@ public class BankSystemOOP {
     }
 
     public static void main(String[] args) {
-        User steven = new User();
-        steven.setName("Steven", "Nodalo");
-        System.out.println(steven.getFullname());
     }
 }
