@@ -1,5 +1,6 @@
 package com.example.banksystemoop;
 
+
 public class BankSystemOOP {
 
     public static class User {
@@ -42,8 +43,14 @@ public class BankSystemOOP {
 
     public static class Member extends User {
         int accountNumber;
+        boolean isActive;
+
+        public void setAccountNumber() {
+            this.accountNumber = new accountGenerator().generateAccountNum();
+        }
     }
 
     public static void main(String[] args) {
+        // call accountGenerator function
     }
 }
