@@ -1,7 +1,7 @@
 package com.example.banksystemoop;
 
 
-public class BankSystemOOP {
+public class user {
 
     public static class User {
 
@@ -42,15 +42,24 @@ public class BankSystemOOP {
     }
 
     public static class Member extends User {
-        int accountNumber;
+        long accountNumber;
         boolean isActive;
 
         public void setAccountNumber() {
             this.accountNumber = new accountGenerator().generateAccountNum();
+            System.out.println(this.getFullname() + "\nAccount number: " + this.accountNumber);
+        }
+
+        public long getAccountNumber() {
+            return this.accountNumber;
         }
     }
 
     public static void main(String[] args) {
-        // call accountGenerator function
+        Member steven = new Member();
+        steven.setName("Steven", "Nodalo");
+        System.out.println(steven.getFullname());
+        steven.setAccountNumber();
+        System.out.println(steven.getAccountNumber());
     }
 }

@@ -1,13 +1,12 @@
 package com.example.banksystemoop;
-import java.util.Random;
+
 
 
 
 public class accountGenerator {
 
-    public int generateAccountNum(){
-        Random random = new Random();
-       return random.nextInt(20);
+    public long generateAccountNum(){
+        return (long) Math.floor(Math.random() * 9000000000000L) + 1000000000000L;
     }
 
 }
