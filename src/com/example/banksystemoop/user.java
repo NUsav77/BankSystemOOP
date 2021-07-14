@@ -7,12 +7,18 @@ public class user {
 
         String firstName;
         String lastName;
+        String fullname;
+        char firstInitial;
+        char lastInitial;
         int age;
         int ssn;
 
         public void setName(String firstName, String lastName) {
             this.firstName = firstName;
             this.lastName = lastName;
+            this.fullname = getFullname();
+            this.firstInitial = firstName.charAt(0);
+            this.lastInitial = lastName.charAt(0);
         }
 
         public void setAge(int age) {
@@ -55,11 +61,5 @@ public class user {
         }
     }
 
-    public static void main(String[] args) {
-        Member steven = new Member();
-        steven.setName("Steven", "Nodalo");
-        System.out.println(steven.getFullname());
-        steven.setAccountNumber();
-        System.out.println(steven.getAccountNumber());
-    }
+
 }
