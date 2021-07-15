@@ -49,11 +49,11 @@ public class user {
 
     public static class Member extends User {
         long accountNumber;
-        boolean isActive;
+        boolean isActive = false;
 
-        public void setAccountNumber() {
+        public long setAccountNumber() {
             this.accountNumber = new accountGenerator().generateAccountNum();
-            System.out.println(this.getFullname() + "\nAccount number: " + this.accountNumber);
+            return this.accountNumber;
         }
 
         public long getAccountNumber() {
