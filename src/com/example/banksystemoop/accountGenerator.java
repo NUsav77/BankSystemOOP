@@ -1,8 +1,6 @@
 package com.example.banksystemoop;
 
 
-
-
 public class accountGenerator {
 
     public long generateAccountNum(){
