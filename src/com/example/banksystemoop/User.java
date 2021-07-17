@@ -47,19 +47,17 @@ public class User {
 }
 
 class Member extends User {
-    long accountNumber;
+    long memberNumber;
     boolean isActive = false;
+    boolean hasChecking = false;
+    boolean hasSaving = false;
+    boolean hasLoan = false;
 
     public Member(String firstName, String lastName) {
         super(firstName, lastName);
-        this.accountNumber = new accountGenerator().generateAccountNum();
-        System.out.println("Member: " + this.fullname + "\nAccount number: " + this.accountNumber);
+        this.memberNumber = new accountGenerator().generateAccountNum();
+        System.out.println("Member: " + this.fullname + "\nAccount number: " + this.memberNumber);
     }
-
-    public long getAccountNumber() {
-        return this.accountNumber;
-    }
-
 
 }
 
